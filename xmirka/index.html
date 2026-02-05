@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>XMirka - IELTS Master AI</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- 3D background -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- Landing Page -->
+<div id="landing">
+  <div class="landing-content">
+    <h1>Welcome to XMirka</h1>
+    <p>Your ultimate IELTS Master AI platform.  
+       Practice Cambridge mocks, get AI help, improve your Reading, Listening, Writing, and Speaking skills!</p>
+    <button id="enter-btn">Enter XMirka</button>
+    <img src="https://cdn-icons-png.flaticon.com/512/2682/2682832.png" class="landing-img" alt="XMirka Logo">
+  </div>
+</div>
+
+<!-- Main App -->
+<div id="app" class="hidden">
+  <div class="sidebar">
+    <h2>XMirka</h2>
+    <ul id="tabs">
+      <li class="tab active" data-tab="help">AI Tutor</li>
+      <li class="tab" data-tab="reading">Reading</li>
+      <li class="tab" data-tab="listening">Listening</li>
+      <li class="tab" data-tab="writing">Writing</li>
+      <li class="tab" data-tab="speaking">Speaking</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <!-- AI Tutor -->
+    <div class="tab-content active" id="help">
+      <h3>AI Tutor</h3>
+      <div class="chat-messages" id="help-messages"></div>
+      <div class="chat-input">
+        <input type="text" id="help-input" placeholder="Ask anything...">
+        <button id="help-send">➡️</button>
+        <button id="help-tts">🔊</button>
+      </div>
+    </div>
+
+    <!-- Reading -->
+    <div class="tab-content" id="reading">
+      <h3>Reading Mocks</h3>
+      <div class="mock-list" id="reading-buttons"></div>
+      <iframe id="reading-frame" style="width:100%; height:400px;" frameborder="0"></iframe>
+    </div>
+
+    <!-- Listening -->
+    <div class="tab-content" id="listening">
+      <h3>Listening Mocks</h3>
+      <div class="mock-list" id="listening-buttons"></div>
+      <audio id="listening-player" controls></audio>
+    </div>
+
+    <!-- Writing -->
+    <div class="tab-content" id="writing">
+      <h3>Writing Task</h3>
+      <p>Describe the graph below.</p>
+      <textarea id="writing-answer" placeholder="Your answer..."></textarea>
+      <button id="writing-check">Check Answer</button>
+      <div id="writing-feedback"></div>
+    </div>
+
+    <!-- Speaking -->
+    <div class="tab-content" id="speaking">
+      <h3>Speaking Task</h3>
+      <p>Describe your favorite hobby for 2 minutes.</p>
+      <textarea id="speaking-answer" placeholder="Your answer..."></textarea>
+      <button id="speaking-feedback-btn">Get Feedback</button>
+      <div id="speaking-feedback"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
